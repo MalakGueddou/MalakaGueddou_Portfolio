@@ -1,0 +1,2072 @@
+/* VOTRE ANCIEN DESIGN QUE VOUS AIMEZ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1A1A1A;
+    line-height: 1.6;
+    background: #F7E8DF;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si besoin */
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-weight: 400;
+    transition: color 0.3s;
+    white-space: nowrap; /* empêche le texte de se couper */
+}
+
+.nav-menu a:hover {
+    color: #E79A8D;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0 0 0;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    padding-right: 2rem;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #1A1A1A;
+}
+
+.highlight {
+    background: linear-gradient(120deg, #F4C542 0%, #F4C542 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4em;
+    background-position: 0 88%;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.cta-box {
+    background: #EFD3C3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.cta-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1A1A1A;
+}
+
+.cta-box p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #1A1A1A;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #E79A8D;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.projects, .hobbies, .about, .parcours {
+    padding: 100px 0;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1A1A1A;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1A1A1A;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    color: #E79A8D;
+    font-weight: 500;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.hobby-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.hobby-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1A1A1A;
+}
+
+.hobby-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* NOUVELLES SECTIONS AVEC STYLE COHÉRENT */
+
+/* Section À Propos */
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1A1A1A;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.about-content p {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.about-personal {
+    margin-top: 2rem;
+}
+
+.personal-item {
+    display: flex;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.personal-item strong {
+    min-width: 100px;
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.personal-item span {
+    color: #666;
+}
+
+/* Section Parcours */
+.parcours {
+    background: #f8f9fa;
+}
+
+.parcours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.parcours-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1A1A1A;
+}
+
+/* Timeline Éducation */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #EFD3C3;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #E79A8D;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #EFD3C3;
+}
+
+.timeline-year {
+    font-weight: 600;
+    color: #E79A8D;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1A1A1A;
+}
+
+.timeline-content p {
+    color: #666;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+/* Expérience Code Alpha */
+.experience-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.experience-header h4 {
+    font-size: 1.2rem;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.experience-date {
+    background: #E79A8D;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.experience-item p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.experience-skills span {
+    background: #EFD3C3;
+    color: #666;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+/* Compétences */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-category h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #1A1A1A;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-list span {
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Section Contact */
+.contact {
+    background: white;
+}
+
+.contact-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #EFD3C3;
+    color: #1A1A1A;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.contact-link:hover {
+    background: #E79A8D;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-image img {
+        height: 400px;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-image {
+        height: 300px;
+    }
+    
+    .about-content h2 {
+        text-align: center;
+    }
+    
+    .parcours-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap; /* les boutons se mettent à la ligne si pas assez d’espace */
+        justify-content: center; /* centrer les boutons */
+        gap: 1rem;
+    }
+}
+/* NOUVEAUX STYLES POUR LES MODIFICATIONS */
+
+/* Hero - Texte très grand */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem; /* TRÈS GRAND */
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: #1A1A1A;
+}
+
+.hero-subtitle-small {
+    margin-bottom: 2rem;
+}
+
+.hero-subtitle-small h3 {
+    font-size: 1rem; /* TRÈS PETIT */
+    color: #666;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.hero-description-small {
+    font-size: 0.9rem; /* PETIT */
+    color: #666;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+/* Section Parcours - 3 colonnes */
+.parcours-grid-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.parcours-column {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.parcours-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #1A1A1A;
+    text-align: center;
+}
+
+/* Photo ronde */
+.profile-circle {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #EFD3C3;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Langues */
+.languages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.language-item strong {
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.language-item span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Compacts skills */
+.skills-grid-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skills-grid-compact .skill-category h5 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #1A1A1A;
+}
+
+.skills-grid-compact .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.skills-grid-compact .skill-list span {
+    background: #EFD3C3;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem; /* Plus petit sur mobile */
+    }
+    
+    .parcours-grid-three {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-circle {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* NOUVEAUX STYLES POUR LA SECTION HERO MODIFIÉE */
+
+.hero-container-modified {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Texte TRÈS GRAND qui dépasse le milieu */
+.hero-text-large {
+    position: absolute;
+    top: 50%;
+    left: 55%; /* Dépasse le milieu vers la droite */
+    transform: translate(-50%, -50%);
+    text-align: left;
+    z-index: 2;
+}
+
+.hero-title-bonjour {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem; /* TRÈS TRÈS GRAND */
+    font-weight: 500;
+    line-height: 0.9;
+    margin: 0;
+    color: #1A1A1A;
+    white-space: nowrap;
+}
+
+.hero-title-symbol {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem; /* Grand mais moins que Bonjour/Bienvenue */
+    font-weight: 400;
+    line-height: 0.8;
+    margin: 0;
+    color: #E79A8D;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+.hero-title-bienvenue {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem; /* TRÈS TRÈS GRAND */
+    font-weight: 500;
+    line-height: 0.9;
+    margin: 0;
+    color: #1A1A1A;
+    white-space: nowrap;
+    margin-left: 2rem;
+}
+
+/* Texte COMPLÈTEMENT À DROITE */
+.hero-bottom-right {
+    position: absolute;
+    bottom: 100px;
+    right: 50px; /* Complètement à droite */
+    text-align: right;
+    max-width: 350px;
+    z-index: 2;
+}
+
+.hero-subtitle-small-modified h3 {
+    font-size: 0.9rem; /* TRÈS PETIT */
+    color: #666;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.hero-description-small-modified {
+    font-size: 0.8rem; /* EXTRÊMEMENT PETIT */
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Ajustements pour le responsive */
+@media (max-width: 1200px) {
+    .hero-title-bonjour,
+    .hero-title-bienvenue {
+        font-size: 6rem;
+    }
+    
+    .hero-title-symbol {
+        font-size: 4rem;
+    }
+    
+    .hero-text-large {
+        left: 60%;
+    }
+    
+    .hero-bottom-right {
+        right: 30px; /* Encore plus à droite sur tablette */
+        bottom: 80px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title-bonjour,
+    .hero-title-bienvenue {
+        font-size: 3.5rem;
+    }
+    
+    .hero-title-symbol {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text-large {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    
+    .hero-bottom-right {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        text-align: center;
+        margin: 2rem auto 0 auto;
+        max-width: 280px;
+    }
+    
+    .hero-title-bonjour,
+    .hero-title-symbol,
+    .hero-title-bienvenue {
+        margin-left: 0;
+    }
+}
+
+/* Pour les très grands écrans */
+@media (min-width: 1600px) {
+    .hero-title-bonjour,
+    .hero-title-bienvenue {
+        font-size: 10rem;
+    }
+    
+    .hero-title-symbol {
+        font-size: 7rem;
+    }
+    
+    .hero-bottom-right {
+        right: 80px; /* Encore plus à droite sur grands écrans */
+        max-width: 400px;
+    }
+}
+/* STYLES FINAUX POUR LA SECTION HERO */
+
+.hero-container-final {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Texte TRÈS GRAND à GAUCHE qui dépasse le milieu */
+.hero-text-left {
+    flex: 1;
+    text-align: left;
+    margin-left: -50px; /* Dépasse vers la gauche */
+}
+
+.hero-title-bonjour-final {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem; /* TRÈS GRAND */
+    font-weight: 500;
+    line-height: 0.9;
+    margin: 0 0 1rem 0;
+    color: #1A1A1A;
+    white-space: nowrap;
+}
+
+.hero-title-welcome-final {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.hero-title-symbol-final {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 400;
+    color: #E79A8D;
+    text-decoration: underline; /* SOULIGNÉ */
+    text-underline-offset: 10px;
+}
+
+.hero-title-bienvenue-final {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem; /* TRÈS GRAND */
+    font-weight: 500;
+    line-height: 0.9;
+    color: #1A1A1A;
+    white-space: nowrap;
+}
+
+/* Description à DROITE (pas au milieu) */
+.hero-description-right {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    max-width: 300px;
+}
+
+.hero-subtitle-final h3 {
+    font-size: 0.9rem; /* PETIT */
+    color: #666;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.hero-description-final {
+    font-size: 0.8rem; /* TRÈS PETIT */
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Ajustements pour le responsive */
+@media (max-width: 1200px) {
+    .hero-title-bonjour-final,
+    .hero-title-bienvenue-final {
+        font-size: 5rem;
+    }
+    
+    .hero-title-symbol-final {
+        font-size: 3.5rem;
+    }
+    
+    .hero-text-left {
+        margin-left: -30px;
+    }
+    
+    .hero-description-right {
+        right: 30px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container-final {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-text-left {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-title-bonjour-final,
+    .hero-title-bienvenue-final {
+        font-size: 3rem;
+    }
+    
+    .hero-title-symbol-final {
+        font-size: 2.5rem;
+    }
+    
+    .hero-title-welcome-final {
+        justify-content: center;
+    }
+    
+    .hero-description-right {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 280px;
+    }
+}
+/* STYLES CORRIGÉS POUR LA SECTION HERO */
+
+.hero-container-understood {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* Texte TRÈS GRAND en haut à GAUCHE */
+.hero-text-top {
+    margin-top: 150px;
+    margin-left: -50px;
+}
+
+.hero-title-bonjour-understood {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    font-weight: 500;
+    line-height: 0.9;
+    margin: 0 0 1rem 0;
+    color: #1A1A1A;
+    white-space: nowrap;
+}
+
+.hero-title-welcome-understood {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.hero-title-symbol-understood {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 400;
+    color: #1A1A1A;
+}
+
+/* Surlignage en ROSE comme l'ancien design */
+.highlight-pink {
+    background: linear-gradient(120deg, #E79A8D 0%, #E79A8D 100%);
+    background-repeat: repeat;
+    background-size: 100% 0.4em;
+    background-position: 0 88%;
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+/* Description en BAS À DROITE */
+.hero-description-bottom-right {
+    position: right;
+    bottom: 100px;
+    right: 200px;
+    text-align: right;
+    max-width: 700px;
+}
+
+.hero-subtitle-understood h2 {
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 3%;
+    margin-right: 10%;
+    text-align: right
+}
+
+.hero-description-understood {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .hero-title-bonjour-understood,
+    .highlight-pink {
+        font-size: 5rem;
+    }
+    
+    .hero-title-symbol-understood {
+        font-size: 3.5rem;
+    }
+    
+    .hero-text-top {
+        margin-right: -30px;
+    }
+    
+    .hero-description-bottom-right {
+        right: 30px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container-understood {
+        text-align: right;
+    }
+    
+    .hero-text-top {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+    
+    .hero-title-bonjour-understood,
+    .highlight-pink {
+        font-size: 3rem;
+    }
+    
+    .hero-title-symbol-understood {
+        font-size: 3rem;
+    }
+    
+    .hero-title-welcome-understood {
+        justify-content: center;
+    }
+    
+    .hero-description-bottom-right {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        text-align: right;
+        margin: 3rem auto 0 auto;
+        max-width: 280px;
+    }
+}
+/* LOISIRS DÉTAILLÉES */
+.hobbies-detailed {
+    padding: 100px 0;
+    background: white;
+}
+
+.hobby-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.hobby-section:last-child {
+    margin-bottom: 0;
+}
+
+.hobby-left .hobby-content {
+    order: 1;
+}
+
+.hobby-left .hobby-images {
+    order: 2;
+}
+
+.hobby-right .hobby-content {
+    order: 2;
+}
+
+.hobby-right .hobby-images {
+    order: 1;
+}
+
+.hobby-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1A1A1A;
+}
+
+.hobby-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.hobby-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.detail-item strong {
+    min-width: 100px;
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.detail-item span {
+    color: #666;
+    flex: 1;
+}
+
+.hobby-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.hobby-images img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.hobby-images img:hover {
+    transform: scale(1.05);
+}
+
+/* CONTACT PROFESSIONNEL */
+.contact-professional {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1A1A1A;
+}
+
+.contact-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+.contact-item strong {
+    display: block;
+    color: #1A1A1A;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.contact-item p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.contact-actions h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1A1A1A;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.action-btn.primary {
+    background: #1A1A1A;
+    color: white;
+}
+
+.action-btn.primary:hover {
+    background: #E79A8D;
+    transform: translateY(-2px);
+}
+
+.action-btn.secondary {
+    background: white;
+    color: #1A1A1A;
+    border: 2px solid #1A1A1A;
+}
+
+.action-btn.secondary:hover {
+    background: #1A1A1A;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.availability {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.availability h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1A1A1A;
+}
+
+.availability p {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hobby-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 60px;
+    }
+    
+    .hobby-left .hobby-content,
+    .hobby-right .hobby-content,
+    .hobby-left .hobby-images,
+    .hobby-right .hobby-images {
+        order: unset;
+    }
+    
+    .hobby-images {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+     .hobby-images img {
+        height: 300px; /* Légèrement réduit sur mobile */
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .hobby-images img {
+        height: 250px; /* Encore plus réduit sur petits écrans */
+    }
+}
+/* ARRIÈRE-PLAN EN HTML */
+.background-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.hobbies-detailed {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.hobbies-detailed .container {
+    position: relative;
+    z-index: 1;
+}
+.background-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1; /* Pas de transparence */
+}
+
+.hobbies-detailed .container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent pour le contenu */
+    padding: 40px;
+    border-radius: 10px;
+}
+/* === GRANDE PHOTO FORMAT TÉLÉPHONE - SANS CADRE === */
+
+.about-image-phone {
+    width: 100%;
+    max-width: 450px; /* Encore plus large */
+    height: 650px; /* Encore plus haute */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    margin: 0 auto;
+    position: relative;
+}
+
+.about-image-phone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image-phone:hover img {
+    transform: scale(1.05);
+}
+
+/* Ajustement de la grille pour la photo plus large */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px; /* Colonne photo encore plus large */
+    gap: 5rem;
+    align-items: start;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .about-image-phone {
+        max-width: 420px;
+        height: 610px;
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image-phone {
+        max-width: 380px;
+        height: 550px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image-phone {
+        max-width: 340px;
+        height: 500px;
+    }
+}
+/* Styles pour les liens de certificats */
+.certificat-link {
+    color: #1A1A1A;
+    text-decoration: none;
+    border-bottom: 2px solid #E79A8D;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.certificat-link:hover {
+    color: #E79A8D;
+    border-bottom-color: #1A1A1A;
+}
+
+.pdf-indicator {
+    display: inline-block;
+    background: #f0f8f0;
+    color: #2E8B57;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    border: 1px solid #d4edda;
+}
+
+/* Effet au survol de l'item d'expérience */
+.experience-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+/* Style CV professionnel */
+.parcours-cv-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Sidebar avec photo ronde */
+.cv-sidebar {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 2rem;
+}
+
+.cv-photo-round {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 2rem auto;
+    border: 4px solid #E79A8D;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.cv-photo-round img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cv-section {
+    margin-bottom: 2rem;
+}
+
+.cv-section:last-child {
+    margin-bottom: 0;
+}
+
+.cv-section h3 {
+    color: #1A1A1A;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #E79A8D;
+}
+
+/* Langues */
+.cv-languages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.cv-language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.language-name {
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+.language-level {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Centres d'intérêt */
+.cv-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cv-interests span {
+    background: #f8f9fa;
+    color: #1A1A1A;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid #e9ecef;
+}
+
+/* Contenu principal */
+.cv-main-content {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+/* Formation */
+.cv-education {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cv-education-item {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cv-education-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.education-title {
+    font-weight: 600;
+    color: #1A1A1A;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.education-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.institution {
+    color: #666;
+    font-weight: 500;
+}
+
+.period {
+    color: #E79A8D;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.education-description {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Expérience */
+.cv-experience-item {
+    padding-bottom: 1.5rem;
+}
+
+.experience-title {
+    font-weight: 600;
+    color: #1A1A1A;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.experience-description {
+    color: #666;
+    margin: 0.8rem 0;
+    line-height: 1.5;
+}
+
+.experience-projects, .experience-skills {
+    margin: 1rem 0;
+}
+
+.experience-projects ul, .experience-skills ul {
+    margin: 0.5rem 0;
+    padding-left: 1.2rem;
+    color: #555;
+}
+
+.experience-projects li, .experience-skills li {
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
+/* Compétences */
+.cv-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skills-category h4 {
+    color: #1A1A1A;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skills-list span {
+    background: #f8f9fa;
+    color: #1A1A1A;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid #e9ecef;
+}
+
+.cv-soft-skills .skills-list span {
+    background: #fff0f0;
+    border: 1px solid #ffe0e0;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .parcours-cv-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .cv-sidebar {
+        position: static;
+        order: -1;
+    }
+    
+    .cv-photo-round {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-main-content {
+        padding: 1.5rem;
+    }
+    
+    .education-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+}
+/* Grille 2×2 pour la peinture */
+.hobby-images-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.image-item {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* SEULEMENT pour la section Dessin - Photos format téléphone VERTICAL côte à côte */
+.hobby-section:has(.hobby-images-grid-3) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.hobby-section:has(.hobby-images-grid-3) .hobby-content {
+    order: 1; /* Texte à gauche */
+}
+
+.hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+    order: 2; /* Photos à droite */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 photos côte à côte */
+    gap: 1rem;
+    width: 100%;
+}
+
+.hobby-section:has(.hobby-images-grid-3) .image-item {
+    width: 100%;
+    height: 300px; /* FORMAT TÉLÉPHONE VERTICAL */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+/* Effet cadre téléphone */
+.hobby-section:has(.hobby-images-grid-3) .image-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 4px;
+    background: #1A1A1A;
+    border-radius: 2px;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.hobby-section:has(.hobby-images-grid-3) .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Plus besoin des rows séparées puisque les 3 sont côte à côte */
+.hobby-section:has(.hobby-images-grid-3) .image-row,
+.hobby-section:has(.hobby-images-grid-3) .image-row-single {
+    display: contents; /* Supprime les rows */
+}
+
+/* Responsive seulement pour le dessin */
+@media (max-width: 1200px) {
+    .hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+        grid-template-columns: 1fr 1fr; /* 2 photos sur tablette */
+    }
+}
+
+@media (max-width: 968px) {
+    .hobby-section:has(.hobby-images-grid-3) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+        order: -1; /* Photos en haut sur mobile */
+        grid-template-columns: 1fr 1fr 1fr; /* Retour à 3 sur mobile si assez d'espace */
+    }
+    
+    .hobby-section:has(.hobby-images-grid-3) .image-item {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+        grid-template-columns: 1fr 1fr; /* 2 photos sur mobile */
+    }
+    
+    .hobby-section:has(.hobby-images-grid-3) .image-item {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+        grid-template-columns: 1fr; /* 1 photo sur petit mobile */
+    }
+}
+/* SEULEMENT pour la section Dessin - Photos format téléphone VERTICAL avec effet hover */
+.hobby-section:has(.hobby-images-grid-3) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.hobby-section:has(.hobby-images-grid-3) .hobby-content {
+    order: 1; /* Texte à gauche */
+}
+
+.hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+    order: 2; /* Photos à droite */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 photos côte à côte */
+    gap: 1rem;
+    width: 100%;
+}
+
+.hobby-section:has(.hobby-images-grid-3) .image-item {
+    width: 100%;
+    height: 300px; /* FORMAT TÉLÉPHONE VERTICAL */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    position: relative;
+    transition: all 0.3s ease; /* Transition pour l'effet hover */
+}
+
+/* Effet cadre téléphone */
+.hobby-section:has(.hobby-images-grid-3) .image-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 4px;
+    background: #1A1A1A;
+    border-radius: 2px;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.hobby-section:has(.hobby-images-grid-3) .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease; /* Transition pour l'image */
+}
+
+/* EFFET HOVER COMME SOLFÈGE */
+.hobby-section:has(.hobby-images-grid-3) .image-item:hover {
+    transform: translateY(-10px); /* Légère élévation */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25); /* Ombre plus prononcée */
+}
+
+.hobby-section:has(.hobby-images-grid-3) .image-item:hover img {
+    transform: scale(1.1); /* Zoom sur l'image */
+}
+
+/* Effet supplémentaire au survol */
+.hobby-section:has(.hobby-images-grid-3) .image-item:hover::before {
+    opacity: 0.5; /* Encoche plus visible */
+}
+
+/* Plus besoin des rows séparées puisque les 3 sont côte à côte */
+.hobby-section:has(.hobby-images-grid-3) .image-row,
+.hobby-section:has(.hobby-images-grid-3) .image-row-single {
+    display: contents; /* Supprime les rows */
+}
+
+/* Responsive seulement pour le dessin */
+@media (max-width: 1200px) {
+    .hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+        grid-template-columns: 1fr 1fr; /* 2 photos sur tablette */
+    }
+}
+
+@media (max-width: 968px) {
+    .hobby-section:has(.hobby-images-grid-3) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+        order: -1; /* Photos en haut sur mobile */
+        grid-template-columns: 1fr 1fr 1fr; /* Retour à 3 sur mobile si assez d'espace */
+    }
+    
+    .hobby-section:has(.hobby-images-grid-3) .image-item {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+        grid-template-columns: 1fr 1fr; /* 2 photos sur mobile */
+    }
+    
+    .hobby-section:has(.hobby-images-grid-3) .image-item {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hobby-section:has(.hobby-images-grid-3) .hobby-images-grid-3 {
+        grid-template-columns: 1fr; /* 1 photo sur petit mobile */
+    }
+}
+/* EFFET HOVER AMÉLIORÉ POUR LA SECTION PEINTURE */
+.hobby-images-grid .image-item {
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.hobby-images-grid .image-item img {
+    transition: all 0.6s ease;
+    filter: brightness(0.95);
+}
+
+/* EFFET HOVER - MOUVEMENT PLUS SUBTIL ET ÉLÉGANT */
+.hobby-images-grid .image-item:hover {
+    transform: translateY(-15px) scale(1.03); /* Élévation douce + léger zoom */
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.1); /* Ombre profonde + bordure subtile */
+}
+
+.hobby-images-grid .image-item:hover img {
+    transform: scale(1.08); /* Zoom doux */
+    filter: brightness(1.05); /* Légère luminosité */
+}
+
+/* Effet de superposition colorée au survol */
+.hobby-images-grid .image-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(231, 154, 141, 0.1) 0%,
+        rgba(244, 197, 66, 0.05) 50%,
+        rgba(46, 139, 87, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.hobby-images-grid .image-item:hover::after {
+    opacity: 1;
+}
+
+/* Effet de bordure animée */
+.hobby-images-grid .image-item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #E79A8D, #F4C542, #2E8B57, #E79A8D);
+    background-size: 400% 400%;
+    border-radius: 17px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+    animation: gradientShift 3s ease infinite;
+}
+
+.hobby-images-grid .image-item:hover::before {
+    opacity: 1;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Effet de brillance subtile */
+.hobby-images-grid .image-item:hover img {
+    position: relative;
+    z-index: 2;
+}
+/* Effets pour les cartes de projet */
+.project-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* EFFET AU SURVOL */
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #E79A8D; /* Bordure rose */
+    box-shadow: 0 10px 25px rgba(231, 154, 141, 0.2);
+}
+
+.project-card:hover h3 {
+    color: #E79A8D; /* Titre en rose */
+}
+
+.project-card:hover .project-link {
+    color: #E79A8D; /* Lien en rose */
+    transform: translateX(5px);
+}
+
+

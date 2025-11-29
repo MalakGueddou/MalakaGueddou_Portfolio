@@ -1,9 +1,43 @@
 // Script pour les interactions du portfolio
-// Récupérer les éléments du modal
+
+// Récupérer les éléments du modal UNE SEULE FOIS
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImage");
 const captionText = document.getElementById("modalCaption");
 const closeModal = document.querySelector(".close-modal");
+
+// Fonction pour ouvrir le modal
+function openModal(img) {
+    if (modal && modalImg) {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+    }
+}
+
+// Fermer le modal
+if (closeModal) {
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    }
+}
+
+// Fermer en cliquant en dehors de l'image
+if (modal) {
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
+// Fermer avec la touche Échap
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modal) {
+        modal.style.display = "none";
+    }
+});
+
 // Animation de la navigation au scroll
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
@@ -58,6 +92,23 @@ document.addEventListener('DOMContentLoaded', function() {
         hobby.style.transform = 'translateY(30px)';
         hobby.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(hobby);
+    });
+
+    // AJOUTER LES ÉVÉNEMENTS DE CLIC AUX IMAGES DES LOISIRS
+    // Section Peinture
+    const peintureImages = document.querySelectorAll('.hobby-images-grid .image-item img');
+    peintureImages.forEach(img => {
+        img.addEventListener('click', function() {
+            openModal(this);
+        });
+    });
+    
+    // Section Dessin
+    const dessinImages = document.querySelectorAll('.hobby-images-grid-3 .image-item img');
+    dessinImages.forEach(img => {
+        img.addEventListener('click', function() {
+            openModal(this);
+        });
     });
 });
 
@@ -176,53 +227,3 @@ function animateCounter(element, target, duration = 2000) {
 console.log('🚀 Portfolio chargé avec succès!');
 console.log('✨ Développé avec HTML, CSS et JavaScript');
 console.log('🎯 Bonne navigation!');
-// Modal pour agrandir les images
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImage");
-const captionText = document.getElementById("modalCaption");
-const closeModal = document.querySelector(".close-modal");
-
-// Fonction pour ouvrir le modal
-function openModal(img) {
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    captionText.innerHTML = img.alt;
-}
-
-// Fermer le modal
-closeModal.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Fermer en cliquant en dehors de l'image
-modal.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Fermer avec la touche Échap
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        modal.style.display = "none";
-    }
-});
-
-// Ajouter les événements de clic à toutes les images des sections loisirs
-document.addEventListener('DOMContentLoaded', function() {
-    // Section Peinture
-    const peintureImages = document.querySelectorAll('.hobby-images-grid .image-item img');
-    peintureImages.forEach(img => {
-        img.addEventListener('click', function() {
-            openModal(this);
-        });
-    });
-    
-    // Section Dessin
-    const dessinImages = document.querySelectorAll('.hobby-images-grid-3 .image-item img');
-    dessinImages.forEach(img => {
-        img.addEventListener('click', function() {
-            openModal(this);
-        });
-    });
-});

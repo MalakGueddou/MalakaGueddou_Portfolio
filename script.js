@@ -6,35 +6,44 @@ const modalImg = document.getElementById("modalImage");
 const captionText = document.getElementById("modalCaption");
 const closeModal = document.querySelector(".close-modal");
 
-// Fonction pour ouvrir le modal
 function openModal(img) {
     if (modal && modalImg) {
+        // EMPÊCHER LE DÉFILEMENT DU BODY
+        document.body.style.overflow = 'hidden';
+        
         modal.style.display = "block";
         modalImg.src = img.src;
         if (captionText) captionText.innerHTML = img.alt;
+        
+        console.log("🖼️ Modal ouvert au centre de l'écran");
     }
 }
 
-// Fermer le modal
+// MODIFIEZ AUSSI LA FONCTION DE FERMETURE :
+function closeModalFunction() {
+    if (modal) {
+        modal.style.display = "none";
+        // RÉTABLIR LE DÉFILEMENT
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// UTILISEZ CETTE FONCTION POUR FERMER
 if (closeModal) {
-    closeModal.onclick = function() {
-        if (modal) modal.style.display = "none";
-    }
+    closeModal.onclick = closeModalFunction;
 }
 
-// Fermer en cliquant en dehors
 if (modal) {
     modal.onclick = function(event) {
         if (event.target === modal) {
-            modal.style.display = "none";
+            closeModalFunction();
         }
     }
 }
 
-// Fermer avec Échap
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape' && modal) {
-        modal.style.display = "none";
+        closeModalFunction();
     }
 });
 

@@ -1,5 +1,9 @@
 // Script pour les interactions du portfolio
-
+// Récupérer les éléments du modal
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const captionText = document.getElementById("modalCaption");
+const closeModal = document.querySelector(".close-modal");
 // Animation de la navigation au scroll
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');

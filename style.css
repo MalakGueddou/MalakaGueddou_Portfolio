@@ -2068,5 +2068,25 @@ h2 {
     color: #E79A8D; /* Lien en rose */
     transform: translateX(5px);
 }
+/* Dans style.css - CORRECTION IMAGE BACKGROUND */
+.background-photo {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: -1 !important;
+    opacity: 0.3 !important;
+}
 
+.hobbies-detailed {
+    position: relative;
+    overflow: hidden;
+}
+
+.hobbies-detailed .container {
+    position: relative;
+    z-index: 1;
+}
 

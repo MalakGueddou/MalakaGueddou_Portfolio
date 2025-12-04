@@ -260,51 +260,109 @@
     <div class="container">
         
         
-        <div class="parcours-cv-layout">
-            <!-- Photo ronde à gauche -->
-            <div class="cv-sidebar">
-                <div class="cv-photo-round">
-                    <img src="images/malak.jpeg" alt="Malak Gueddou">
-                </div>
-                
-                <!-- Langues -->
-                <div class="cv-section">
-                    <h3>Langues courantes</h3>
-                    <div class="cv-languages">
-                        <div class="cv-language-item">
-                            <span class="language-name">Arabe</span>
-                            
-                        </div>
-                        <div class="cv-language-item">
-                            <span class="language-name">Français</span>
-                            
-                        </div>
-                        <div class="cv-language-item">
-                            <span class="language-name">Anglais</span>
-                            
-                        </div>
-                        <div class="cv-language-item">
-                            <span class="language-name">Turc</span>
-                            
-                        </div>
-                    </div>
-                </div>
+        <div class="parcours-cv-layout" style="
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    align-items: start;
+    
+">
+    <!-- COLONNE GAUCHE -->
+    <div style="
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+">
+        <!-- Photo ronde -->
+        <div class="cv-photo-round" style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; border: 3px solid #000; margin: 0 auto 20px;">
+            <img src="images/malak.jpeg" alt="Malak Gueddou" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
 
-                <!-- Centres d'intérêt -->
-                <div class="cv-section">
-                    <h3>Centres d'intérêt</h3>
-                    <div class="cv-interests">
-                        <span>Développement web</span>
-                        <span>Intelligence artificielle</span>
-                        <span>Lecture</span>
-                        <span>Musique</span>
-                        <span>Art</span>
-                        <span>Créativité</span>
-                        <span>Apprentissage des langues</span>
-                    </div>
-                </div>
+        <!-- Langues -->
+        <div class="cv-section">
+    <h3>Langues courantes</h3>
+    <div class="cv-languages">
+        <div class="cv-language-item">
+            <span class="language-name">Arabe</span>
+            <div class="language-stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star">☆</span>
             </div>
+        </div>
+        <div class="cv-language-item">
+            <span class="language-name">Français</span>
+            <div class="language-stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star">☆</span>
+            </div>
+        </div>
+        <div class="cv-language-item">
+            <span class="language-name">Anglais</span>
+            <div class="language-stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star">☆</span>
+            </div>
+        </div>
+        <div class="cv-language-item">
+            <span class="language-name">Turc</span>
+            <div class="language-stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star">☆</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Centres d'intérêt -->
+        <div class="cv-section">
+            <h3>Centres d'intérêt</h3>
+            <div class="cv-interests">
+                <span>Développement web</span>
+                <span>Intelligence artificielle</span>
+                <span>Lecture</span>
+                <span>Musique</span>
+                <span>Art</span>
+                <span>Créativité</span>
+                <span>Apprentissage des langues</span>
+            </div>
+        </div>
+         <!-- Compétences Comportementales -->
+                <div class="cv-section">
+                    <h3>Compétences Comportementales</h3>
+                    <div class="cv-soft-skills">
+                        <div class="skills-list">
+                            <span>Résolution de problèmes</span>
+                            <span>Gestion du temps</span>
+                            <span>Adaptabilité</span>
+                            <span>Travail en équipe</span>
+                            <span>Communication</span>
+                            <span>Organisation</span>
+                        </div>
+                    </div>
+                </div>
+    </div>
 
+    <!-- COLONNE DROITE -->
+<div style="
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: auto;  <!-- Scroll vertical -->
+ 
+    
+">
             <!-- Contenu principal à droite -->
             <div class="cv-main-content">
                 <!-- Formation -->
@@ -314,7 +372,7 @@
                         <div class="cv-education-item">
                             <div class="education-title">Licence en Informatique Fondamentale</div>
                             <div class="education-details">
-                                <span class="institution">Université Ibn Tofaïl</span>
+                                <span class="institution">Université Ibn Tofail</span>
                                 <span class="period">2023 - 2026 (en cours)</span>
                             </div>
                             <div class="education-description">Tronc commun national Mathématiques Informatique (MIP)</div>
@@ -393,6 +451,7 @@
                                 <span>C++</span>
                                 <span>JavaScript</span>
                                 <span>Shell</span>
+                                <span>Assembleur</span>
                             </div>
                         </div>
                         
@@ -419,25 +478,13 @@
                                 <span>Structures de données</span>
                                 <span>Architecture des ordinateurs</span>
                                 <span>Systèmes d'exploitation</span>
+                                <span>Linux</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Compétences Comportementales -->
-                <div class="cv-section">
-                    <h3>Compétences Comportementales</h3>
-                    <div class="cv-soft-skills">
-                        <div class="skills-list">
-                            <span>Résolution de problèmes</span>
-                            <span>Gestion du temps</span>
-                            <span>Adaptabilité</span>
-                            <span>Travail en équipe</span>
-                            <span>Communication</span>
-                            <span>Organisation</span>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -465,7 +512,7 @@
 
     <!-- Section Loisirs Détailées -->
     <section id="loisirs" class="hobbies-detailed">
-        
+        <img src="images/background.jpg" class="background-photo" alt="Arrière-plan loisirs">
         <div class="container">
            
             
@@ -548,6 +595,7 @@
     </div>
 </div>
         </div>
+<img src="images/background.jpg" class="background-photo" alt="Arrière-plan loisirs">
     </section>
 
     <!-- Section Contact Professionnel -->
@@ -667,6 +715,7 @@
     <img class="modal-content" id="modalImage">
     <div class="modal-caption" id="modalCaption"></div>
 </div>
+
     <script src="script.js"></script>
     
 </body>

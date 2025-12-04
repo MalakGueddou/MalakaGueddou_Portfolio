@@ -2311,29 +2311,3 @@ h2 {
     margin: 20px auto;
     max-width: 1200px;
 }
-/* Dans style.css */
-.background-photo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0.4; /* Ajustez l'opacité */
-}
-
-.hobbies-detailed {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.hobbies-detailed .container {
-    position: relative;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    padding: 40px;
-    margin: 40px auto;
-}

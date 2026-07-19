@@ -241,22 +241,23 @@ h2 {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
     align-items: center;
 }
 
 .about-image {
     width: 100%;
-    height: 500px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-image img {
     width: 100%;
-    height: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
     object-fit: cover;
 }
 

@@ -269,16 +269,21 @@ h2 {
 }
 
 .about-description {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.2rem;      /* Taille du texte */
+    font-family: 'Poppins', sans-serif; /* Police */
+    font-weight: 400;       /* Épaisseur */
+    line-height: 1.9;       /* Espacement entre les lignes */
     margin-bottom: 1.5rem;
-    color: #555;
+    color: #444;
+    text-align: justify;    /* Texte bien aligné */
 }
 
 .about-content p {
-    line-height: 1.7;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.9;
     margin-bottom: 2rem;
-    color: #666;
+    color: #555;
 }
 
 .about-personal {

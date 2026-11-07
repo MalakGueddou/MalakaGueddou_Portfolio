@@ -1467,15 +1467,13 @@ h2 {
 .certificat-link {
     color: #1A1A1A;
     text-decoration: none;
-    border-bottom: 2px solid #E79A8D;
     padding-bottom: 2px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .certificat-link:hover {
-    color: #E79A8D;
-    border-bottom-color: #1A1A1A;
+    color: #d18577;
 }
 
 .pdf-indicator {
@@ -1706,7 +1704,7 @@ h2 {
 
 .cv-soft-skills .skills-list span {
     background: #fff0f0;
-    border: 1px solid #ffe0e0;
+    border: 2px solid #d6a2a2;
 }
 
 /* Responsive */

@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
     color: #1A1A1A;
     line-height: 1.6;
-    background: #F7E8DF;
+    background: #f8f3ee;
 }
 
 .navbar {
@@ -202,7 +202,7 @@ h2 {
 }
 
 .project-link {
-    color: #E79A8D;
+    color: #5894ba;
     font-weight: 500;
 }
 
@@ -2060,16 +2060,16 @@ h2 {
 /* EFFET AU SURVOL */
 .project-card:hover {
     transform: translateY(-5px);
-    border-color: #E79A8D; /* Bordure rose */
+    border-color: #9ec6e7; /* Bordure rose */
     box-shadow: 0 10px 25px rgba(231, 154, 141, 0.2);
 }
 
 .project-card:hover h3 {
-    color: #E79A8D; /* Titre en rose */
+    color: #2b5091; /* Titre en rose */
 }
 
 .project-card:hover .project-link {
-    color: #E79A8D; /* Lien en rose */
+    color: #0c255a; /* Lien en rose */
     transform: translateX(5px);
 }
 /* Dans style.css - CORRECTION IMAGE BACKGROUND */
@@ -2316,4 +2316,160 @@ h2 {
     max-width: 1200px;
 }
 
+
+
+/* SECTION MON CV */
+
+.malak-resume-section {
+    background-color: #fcfaf9;
+    padding: 90px 5% 100px;
+    text-align: center;
+}
+
+.malak-resume-heading {
+    margin-bottom: 55px;
+}
+
+.malak-resume-heading span {
+    color: #d99586;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.malak-resume-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #25201e;
+    margin: 12px 0;
+}
+
+.malak-resume-heading p {
+    color: #777;
+    font-size: 17px;
+}
+
+.malak-resume-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.malak-resume-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 25px;
+    padding: 30px 35px;
+    background-color: transparent;
+    border: 1px solid #e8d5ca;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.malak-resume-item:hover {
+    background-color: #fff;
+    border-color: #d99586;
+    transform: translateX(5px);
+}
+
+.malak-resume-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3e3da;
+    color: #d48778;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.malak-resume-content {
+    flex: 1;
+}
+
+.malak-resume-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #25201e;
+    margin-bottom: 8px;
+}
+
+.malak-resume-content p {
+    font-size: 15px;
+    color: #777;
+    margin: 0;
+}
+
+.malak-resume-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 22px;
+    border: 1px solid #d99586;
+    border-radius: 30px;
+    color: #c77e70;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.malak-resume-link:hover {
+    background-color: #d99586;
+    color: white;
+}
+
+.malak-resume-download {
+    background-color: #d99586;
+    color: white;
+}
+
+.malak-resume-download:hover {
+    background-color: #bd796b;
+    border-color: #bd796b;
+}
+
+@media (max-width: 768px) {
+    .malak-resume-section {
+        padding: 70px 6%;
+    }
+
+    .malak-resume-heading h2 {
+        font-size: 38px;
+    }
+
+    .malak-resume-item {
+        flex-wrap: wrap;
+        padding: 25px 20px;
+        gap: 15px;
+    }
+
+    .malak-resume-content {
+        min-width: 180px;
+    }
+
+    .malak-resume-link {
+        margin-left: 70px;
+    }
+}
+
+
+
+#projets {
+    background-image: url("images/programmation.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#projets h2 {
+    color: #ece2b0;
+}
 

@@ -2499,3 +2499,49 @@ h2 {
     }
 
 }
+
+/* Organisation des sections */
+#loisirs .hobby-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Musique et dessin */
+#loisirs .hobby-left .hobby-content {
+    order: 1;
+}
+
+#loisirs .hobby-left .hobby-images,
+#loisirs .hobby-left .hobby-images-grid,
+#loisirs .hobby-left .hobby-images-grid-3 {
+    order: 2;
+}
+
+/* Peinture */
+#loisirs .hobby-right .hobby-content {
+    order: 2;
+}
+
+#loisirs .hobby-right .hobby-images-grid {
+    order: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #loisirs .hobby-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #loisirs .hobby-section .hobby-content {
+        order: 1;
+    }
+
+    #loisirs .hobby-section .hobby-images,
+    #loisirs .hobby-section .hobby-images-grid,
+    #loisirs .hobby-section .hobby-images-grid-3 {
+        order: 2;
+    }
+}

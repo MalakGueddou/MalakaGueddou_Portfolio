@@ -2473,3 +2473,29 @@ h2 {
     color: #ece2b0;
 }
 
+ /* Adaptation aux téléphones */
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}

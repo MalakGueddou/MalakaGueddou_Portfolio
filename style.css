@@ -2545,3 +2545,35 @@ h2 {
         order: 2;
     }
 }
+
+
+/* Correction affichage mobile - Parcours */
+@media (max-width: 768px) {
+
+    #parcours .parcours-cv-layout {
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    #parcours .parcours-right {
+        min-width: 0;
+        overflow-y: visible;
+    }
+
+    #parcours .cv-main-content,
+    #parcours .cv-section {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    #parcours .education-title,
+    #parcours .experience-description,
+    #parcours .experience-projects,
+    #parcours .experience-skills {
+        overflow-wrap: anywhere;
+    }
+
+    #parcours .cv-section ul {
+        padding-left: 20px;
+    }
+}

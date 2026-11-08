@@ -2547,33 +2547,37 @@ h2 {
 }
 
 
-/* Correction affichage mobile - Parcours */
+/* Parcours : navigation horizontale sur mobile uniquement */
 @media (max-width: 768px) {
 
     #parcours .parcours-cv-layout {
-        grid-template-columns: 250px minmax(0, 1fr);
-        gap: 20px;
+        display: flex !important;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #parcours .parcours-cv-layout > div {
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 100%;
+        box-sizing: border-box;
+        scroll-snap-align: start;
     }
 
     #parcours .parcours-right {
-        min-width: 0;
-        overflow-y: visible;
+        overflow: visible !important;
     }
 
-    #parcours .cv-main-content,
-    #parcours .cv-section {
-        min-width: 0;
-        max-width: 100%;
+    #parcours .parcours-cv-layout::-webkit-scrollbar {
+        display: none;
     }
 
-    #parcours .education-title,
-    #parcours .experience-description,
-    #parcours .experience-projects,
-    #parcours .experience-skills {
-        overflow-wrap: anywhere;
-    }
-
-    #parcours .cv-section ul {
-        padding-left: 20px;
+    #parcours .parcours-cv-layout {
+        scrollbar-width: none;
     }
 }
